@@ -126,6 +126,9 @@ void TIAAudioProcessor::runUntil (int& done, AudioSampleBuffer& buffer, int pos)
         
         for (int i = 0; i < count; i++)
         {
+            if (out[i] < 30)
+                out[i] = out[i];
+            
             data[i] = (out[i] / 255.0f) * 2.0f - 1.0f;
         }
         
@@ -166,9 +169,84 @@ void TIAAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& mid
         {
             if (curNote != -1)
             {
+                float freq0 = getMidiNoteInHertz (curNote + parameterIntValue (paramPulse1Tune) + parameterIntValue (paramPulse1Fine) / 100.0f);
+                float freq1 = getMidiNoteInHertz (curNote + parameterIntValue (paramPulse2Tune) + parameterIntValue (paramPulse2Fine) / 100.0f);
+
+                float base = 31399.5f;
+                int div0 = 0;
+                int div1 = 0;
+
+                // ch0
+                div0 = base / freq0 / 2;
+                if (div0 <= 15)
+                {
+                    Update_tia_sound (AUDF0, div0);
+                    Update_tia_sound (AUDC0, 4);
+                }
+                else
+                {
+                    div0 = base / freq0 / 6;
+                    if (div0 <= 15)
+                    {
+                        Update_tia_sound (AUDF0, div0);
+                        Update_tia_sound (AUDC0, 0xC);
+                    }
+                    else
+                    {
+                        div0 = base / freq0 / 31;
+                        if (div0 <= 15)
+                        {
+                            Update_tia_sound (AUDF0, div0);
+                            Update_tia_sound (AUDC0, 6);
+                        }
+                        else
+                        {
+                            div0 = base / freq0 / 93;
+                            Update_tia_sound (AUDF0, div0);
+                            Update_tia_sound (AUDC0, 0xE);
+                        }
+                    }
+                }
+                
+                // ch1
+                div1 = base / freq1 / 2;
+                if (div1 <= 15)
+                {
+                    Update_tia_sound (AUDF1, div1);
+                    Update_tia_sound (AUDC1, 4);
+                }
+                else
+                {
+                    div1 = base / freq1 / 6;
+                    if (div1 <= 15)
+                    {
+                        Update_tia_sound (AUDF1, div1);
+                        Update_tia_sound (AUDC1, 0xC);
+                    }
+                    else
+                    {
+                        div1 = base / freq1 / 31;
+                        if (div1 <= 15)
+                        {
+                            Update_tia_sound (AUDF1, div1);
+                            Update_tia_sound (AUDC1, 6);
+                        }
+                        else
+                        {
+                            div1 = base / freq1 / 93;
+                            Update_tia_sound (AUDF1, div1);
+                            Update_tia_sound (AUDC1, 0xE);
+                        }
+                    }
+                }
+                
+                Update_tia_sound (AUDV0, velocity * parameterIntValue (paramPulse1Level));
+                Update_tia_sound (AUDV1, velocity * parameterIntValue (paramPulse2Level));
             }
             else
             {
+                Update_tia_sound (AUDV0, 0);
+                Update_tia_sound (AUDV1, 0);
             }
             
             lastNote = curNote;

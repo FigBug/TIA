@@ -35,15 +35,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdint.h>
-
-/* define some data types to keep it platform independent */
-#define int8  int8_t
-#define int16 int16_t
-#define int32 int32_t
-
-#define uint8  uint8_t
-#define uint16 uint16_t
-#define uint32 uint32_t
+#include "TIASound.h"
 
 /* CONSTANT DEFINITIONS */
 
@@ -67,13 +59,6 @@
                  
 #define DIV3_MASK    0x0c                 
                  
-#define AUDC0        0x15
-#define AUDC1        0x16
-#define AUDF0        0x17
-#define AUDF1        0x18
-#define AUDV0        0x19
-#define AUDV1        0x1a
-
 /* the size (in entries) of the 4 polynomial tables */
 #define POLY4_SIZE  0x000f
 #define POLY5_SIZE  0x001f
@@ -300,7 +285,7 @@ void Update_tia_sound (uint16 addr, uint8 val)
 /*                                                                           */
 /*****************************************************************************/
 
-void Tia_process (register unsigned char *buffer, register uint16 n)
+void Tia_process (unsigned char *buffer, uint16 n)
 {
 	register uint8 audc0,audv0,audc1,audv1;
     register uint8 div_n_cnt0,div_n_cnt1;

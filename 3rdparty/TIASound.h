@@ -36,19 +36,38 @@
 #ifndef _TIASOUND_H
 #define _TIASOUND_H
 
-extern "C" {
-void Tia_sound_init (unsigned int sample_freq, unsigned int playback_freq);
-void Update_tia_sound (unsigned int addr, unsigned char val);
-void Tia_process (register unsigned char *buffer,
-                  register unsigned int n);
+#define AUDC0        0x15
+#define AUDC1        0x16
+#define AUDF0        0x17
+#define AUDF1        0x18
+#define AUDV0        0x19
+#define AUDV1        0x1a
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+    
+/* define some data types to keep it platform independent */
+#define int8  int8_t
+#define int16 int16_t
+#define int32 int32_t
+    
+#define uint8  uint8_t
+#define uint16 uint16_t
+#define uint32 uint32_t
+    
+void Tia_sound_init (uint16 sample_freq, uint16 playback_freq);
+void Update_tia_sound (uint16 addr, uint8 val);
+void Tia_process (unsigned char *buffer, uint16 n);
+    
 void Tia_get_registers (unsigned char *reg1, unsigned char *reg2, unsigned char *reg3,
                         unsigned char *reg4, unsigned char *reg5, unsigned char *reg6);
 void Tia_set_registers (unsigned char reg1, unsigned char reg2, unsigned char reg3,
                         unsigned char reg4, unsigned char reg5, unsigned char reg6);
 
 void Tia_volume (unsigned int percent);
-
+#ifdef __cplusplus
 }
+#endif
 
 #endif
