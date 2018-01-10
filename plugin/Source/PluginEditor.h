@@ -18,22 +18,22 @@
 //==============================================================================
 /**
 */
-class PAPUAudioProcessorEditor  : public slAudioProcessorEditor
+class TIAAudioProcessorEditor  : public slAudioProcessorEditor
 {
 public:
-    PAPUAudioProcessorEditor (PAPUAudioProcessor&);
-    ~PAPUAudioProcessorEditor();
+    TIAAudioProcessorEditor (TIAAudioProcessor&);
+    ~TIAAudioProcessorEditor();
 
     //==============================================================================
     void resized() override;
     void paint (Graphics& g) override;
 
-    PAPUAudioProcessor& processor;
+    TIAAudioProcessor& processor;
     
     drow::TriggeredScope scope;
     Image logo;
     
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PAPUAudioProcessorEditor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (TIAAudioProcessorEditor)
 };
 
 

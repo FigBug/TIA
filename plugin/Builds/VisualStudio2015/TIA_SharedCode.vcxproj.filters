@@ -2,11 +2,8 @@
 
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="TIA\Source\TIA\frame-manager">
-      <UniqueIdentifier>{1805BCD2-C966-0032-2CBF-DD7156ED3C07}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="TIA\Source\TIA">
-      <UniqueIdentifier>{C8ED71EA-1141-2262-D91D-98A310E1BCE9}</UniqueIdentifier>
+    <Filter Include="TIA\Source\tiasound">
+      <UniqueIdentifier>{98978528-4C6F-2E0E-ACC4-5EF91809A07D}</UniqueIdentifier>
     </Filter>
     <Filter Include="TIA\Source\Resources">
       <UniqueIdentifier>{1DAFEF61-9044-51EB-962C-4C7FB1421062}</UniqueIdentifier>
@@ -457,35 +454,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\3rdparty\tia\frame-manager\AbstractFrameManager.cxx">
-      <Filter>TIA\Source\TIA\frame-manager</Filter>
+    <ClCompile Include="..\..\..\3rdparty\TIASound.c">
+      <Filter>TIA\Source\tiasound</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\3rdparty\tia\frame-manager\FrameLayoutDetector.cxx">
-      <Filter>TIA\Source\TIA\frame-manager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\3rdparty\tia\frame-manager\FrameManager.cxx">
-      <Filter>TIA\Source\TIA\frame-manager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\3rdparty\tia\frame-manager\JitterEmulation.cxx">
-      <Filter>TIA\Source\TIA\frame-manager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\3rdparty\tia\frame-manager\YStartDetector.cxx">
-      <Filter>TIA\Source\TIA\frame-manager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\3rdparty\tia\Background.cxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\3rdparty\tia\Ball.cxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\3rdparty\tia\DrawCounterDecodes.cxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\3rdparty\tia\LatchedInput.cxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\3rdparty\tia\Missile.cxx">
-      <Filter>TIA\Source\TIA</Filter>
+    <ClCompile Include="..\..\..\modules\slCommon\SingleLineTextEditor.cpp">
+      <Filter>TIA\Source\Common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\modules\slCommon\slComponents.cpp">
       <Filter>TIA\Source\Common</Filter>
@@ -2598,50 +2571,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\3rdparty\tia\frame-manager\AbstractFrameManager.hxx">
-      <Filter>TIA\Source\TIA\frame-manager</Filter>
+    <ClInclude Include="..\..\..\3rdparty\TIASound.h">
+      <Filter>TIA\Source\tiasound</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\frame-manager\FrameLayoutDetector.hxx">
-      <Filter>TIA\Source\TIA\frame-manager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\frame-manager\FrameManager.hxx">
-      <Filter>TIA\Source\TIA\frame-manager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\frame-manager\JitterEmulation.hxx">
-      <Filter>TIA\Source\TIA\frame-manager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\frame-manager\YStartDetector.hxx">
-      <Filter>TIA\Source\TIA\frame-manager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\Background.hxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\Ball.hxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\DelayQueue.hxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\DelayQueueIterator.hxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\DelayQueueIteratorImpl.hxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\DelayQueueMember.hxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\DrawCounterDecodes.hxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\FrameLayout.hxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\LatchedInput.hxx">
-      <Filter>TIA\Source\TIA</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\3rdparty\tia\Missile.hxx">
-      <Filter>TIA\Source\TIA</Filter>
+    <ClInclude Include="..\..\..\modules\slCommon\SingleLineTextEditor.h">
+      <Filter>TIA\Source\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\modules\slCommon\slCommon.h">
       <Filter>TIA\Source\Common</Filter>
@@ -4152,6 +4086,9 @@
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_data_structures\values\juce_ValueTreeSynchroniser.h">
       <Filter>Juce Modules\juce_data_structures\values</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\JUCE\modules\juce_data_structures\values\juce_ValueWithDefault.h">
+      <Filter>Juce Modules\juce_data_structures\values</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_data_structures\juce_data_structures.h">
       <Filter>Juce Modules\juce_data_structures</Filter>
     </ClInclude>
@@ -4291,6 +4228,9 @@
       <Filter>Juce Modules\juce_graphics\geometry</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_graphics\geometry\juce_Line.h">
+      <Filter>Juce Modules\juce_graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\JUCE\modules\juce_graphics\geometry\juce_Parallelogram.h">
       <Filter>Juce Modules\juce_graphics\geometry</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_graphics\geometry\juce_Path.h">
@@ -4994,9 +4934,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\3rdparty\tia\frame-manager\module.mk">
-      <Filter>TIA\Source\TIA\frame-manager</Filter>
-    </None>
     <None Include="..\..\Resources\logo.png">
       <Filter>TIA\Source\Resources</Filter>
     </None>

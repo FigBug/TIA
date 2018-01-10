@@ -7,27 +7,8 @@
 namespace BinaryData
 {
 
-//================== module.mk ==================
-static const unsigned char temp_binary_data_0[] =
-"MODULE := src/emucore/tia/frame-manager\n"
-"\n"
-"MODULE_OBJS := \\\n"
-"\tsrc/emucore/tia/frame-manager/FrameManager.o \\\n"
-"\tsrc/emucore/tia/frame-manager/AbstractFrameManager.o \\\n"
-"\tsrc/emucore/tia/frame-manager/FrameLayoutDetector.o \\\n"
-"\tsrc/emucore/tia/frame-manager/YStartDetector.o \\\n"
-"\tsrc/emucore/tia/frame-manager/JitterEmulation.o\n"
-"\n"
-"MODULE_DIRS += \\\n"
-"\tsrc/emucore/tia/frame-manager\n"
-"\n"
-"# Include common rules\n"
-"include $(srcdir)/common.rules\n";
-
-const char* module_mk = (const char*) temp_binary_data_0;
-
 //================== logo.png ==================
-static const unsigned char temp_binary_data_1[] =
+static const unsigned char temp_binary_data_0[] =
 { 137,80,78,71,13,10,26,10,0,0,0,13,73,72,68,82,0,0,0,200,0,0,0,30,8,6,0,0,0,105,63,81,172,0,0,0,4,103,65,77,65,0,0,177,143,11,252,97,5,0,0,0,32,99,72,82,77,0,0,122,38,0,0,128,132,0,0,250,0,0,0,128,232,0,0,117,48,0,0,234,96,0,0,58,152,0,0,23,112,156,186,
 81,60,0,0,0,9,112,72,89,115,0,0,11,19,0,0,11,19,1,0,154,156,24,0,0,2,114,105,84,88,116,88,77,76,58,99,111,109,46,97,100,111,98,101,46,120,109,112,0,0,0,0,0,60,120,58,120,109,112,109,101,116,97,32,120,109,108,110,115,58,120,61,34,97,100,111,98,101,58,
 110,115,58,109,101,116,97,47,34,32,120,58,120,109,112,116,107,61,34,88,77,80,32,67,111,114,101,32,53,46,52,46,48,34,62,10,32,32,32,60,114,100,102,58,82,68,70,32,120,109,108,110,115,58,114,100,102,61,34,104,116,116,112,58,47,47,119,119,119,46,119,51,46,
@@ -45,7 +26,7 @@ static const unsigned char temp_binary_data_1[] =
 2,24,196,37,72,254,104,2,237,238,32,163,167,113,131,230,226,29,199,189,99,196,253,110,208,162,36,129,19,68,194,69,240,211,8,96,144,167,77,156,126,37,2,24,68,194,69,48,4,32,0,1,8,64,0,2,16,88,33,240,5,92,109,72,56,75,2,68,40,0,0,0,0,73,69,78,68,174,66,
 96,130,0,0 };
 
-const char* logo_png = (const char*) temp_binary_data_1;
+const char* logo_png = (const char*) temp_binary_data_0;
 
 
 const char* getNamedResource (const char*, int&) throw();
@@ -58,7 +39,6 @@ const char* getNamedResource (const char* resourceNameUTF8, int& numBytes) throw
 
     switch (hash)
     {
-        case 0xa37d2451:  numBytes = 420; return module_mk;
         case 0x78ded995:  numBytes = 1120; return logo_png;
         default: break;
     }
@@ -69,7 +49,6 @@ const char* getNamedResource (const char* resourceNameUTF8, int& numBytes) throw
 
 const char* namedResourceList[] =
 {
-    "module_mk",
     "logo_png"
 };
 

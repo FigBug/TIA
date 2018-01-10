@@ -12,20 +12,19 @@
 #define PLUGINPROCESSOR_H_INCLUDED
 
 #include "../JuceLibraryCode/JuceHeader.h"
-#include "gb_apu/Gb_Apu.h"
-#include "gb_apu/Multi_Buffer.h"
 #include "slCommon.h"
+#include "../../3rdparty/TIASound.h"
 
 //==============================================================================
 /**
 */
-class PAPUAudioProcessorEditor;
-class PAPUAudioProcessor : public slProcessor
+class TIAAudioProcessorEditor;
+class TIAAudioProcessor : public slProcessor
 {
 public:
     //==============================================================================
-    PAPUAudioProcessor();
-    ~PAPUAudioProcessor();
+    TIAAudioProcessor();
+    ~TIAAudioProcessor();
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -39,33 +38,15 @@ public:
 
     //==============================================================================
     
-    static const char* paramPulse1OL;
-    static const char* paramPulse1OR;
-    static const char* paramPulse1Duty;
-    static const char* paramPulse1A;
-    static const char* paramPulse1R;
+    static const char* paramPulse1Level;
     static const char* paramPulse1Tune;
     static const char* paramPulse1Fine;
-    static const char* paramPulse1Sweep;
-    static const char* paramPulse1Shift;
-    
-    static const char* paramPulse2OL;
-    static const char* paramPulse2OR;
-    static const char* paramPulse2Duty;
-    static const char* paramPulse2A;
-    static const char* paramPulse2R;
+    static const char* paramPulse1Shape;
+
+    static const char* paramPulse2Level;
     static const char* paramPulse2Tune;
     static const char* paramPulse2Fine;
-
-    static const char* paramNoiseOL;
-    static const char* paramNoiseOR;
-    static const char* paramNoiseShift;
-    static const char* paramNoiseStep;
-    static const char* paramNoiseRatio;
-    static const char* paramNoiseA;
-    static const char* paramNoiseR;
-    
-    static const char* paramOutput;
+    static const char* paramPulse2Shape;
     
 private:
     void runUntil (int& done, AudioSampleBuffer& buffer, int pos);
@@ -75,20 +56,11 @@ private:
     Array<int> noteQueue;
     
     LinearSmoothedValue<float> outputSmoothed;
-    Component::SafePointer<PAPUAudioProcessorEditor> editor;
+    Component::SafePointer<TIAAudioProcessorEditor> editor;
     
-    Gb_Apu apu;
-    Stereo_Buffer buf;
-    
-    blip_time_t time = 0;
-    
-    blip_time_t clock() { return time += 4; }
-    
-    uint8_t last24 = 0x00;
-    uint8_t last25 = 0x00;
     
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PAPUAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (TIAAudioProcessor)
 };
 
 

@@ -14,57 +14,18 @@
               companyCopyright="SocaLabs">
   <MAINGROUP id="dPRjsF" name="TIA">
     <GROUP id="{EE796482-0D02-0052-80F4-B1FE6CE0D41A}" name="Source">
-      <GROUP id="{3344A43A-B55B-7876-70B3-CCC17DA4B65B}" name="TIA">
-        <GROUP id="{F5534634-15A8-4BC6-D31A-0C7BF13AB732}" name="frame-manager">
-          <FILE id="UPvTnP" name="AbstractFrameManager.cxx" compile="1" resource="0"
-                file="../3rdparty/tia/frame-manager/AbstractFrameManager.cxx"/>
-          <FILE id="ah7cox" name="AbstractFrameManager.hxx" compile="0" resource="0"
-                file="../3rdparty/tia/frame-manager/AbstractFrameManager.hxx"/>
-          <FILE id="YZGV8D" name="FrameLayoutDetector.cxx" compile="1" resource="0"
-                file="../3rdparty/tia/frame-manager/FrameLayoutDetector.cxx"/>
-          <FILE id="IaEyXa" name="FrameLayoutDetector.hxx" compile="0" resource="0"
-                file="../3rdparty/tia/frame-manager/FrameLayoutDetector.hxx"/>
-          <FILE id="zgDKjg" name="FrameManager.cxx" compile="1" resource="0"
-                file="../3rdparty/tia/frame-manager/FrameManager.cxx"/>
-          <FILE id="Zrgk1b" name="FrameManager.hxx" compile="0" resource="0"
-                file="../3rdparty/tia/frame-manager/FrameManager.hxx"/>
-          <FILE id="FARQN9" name="JitterEmulation.cxx" compile="1" resource="0"
-                file="../3rdparty/tia/frame-manager/JitterEmulation.cxx"/>
-          <FILE id="t54fPJ" name="JitterEmulation.hxx" compile="0" resource="0"
-                file="../3rdparty/tia/frame-manager/JitterEmulation.hxx"/>
-          <FILE id="FuLlQT" name="module.mk" compile="0" resource="1" file="../3rdparty/tia/frame-manager/module.mk"/>
-          <FILE id="cZCnJl" name="YStartDetector.cxx" compile="1" resource="0"
-                file="../3rdparty/tia/frame-manager/YStartDetector.cxx"/>
-          <FILE id="uVbzzC" name="YStartDetector.hxx" compile="0" resource="0"
-                file="../3rdparty/tia/frame-manager/YStartDetector.hxx"/>
-        </GROUP>
-        <FILE id="m01VzP" name="Background.cxx" compile="1" resource="0" file="../3rdparty/tia/Background.cxx"/>
-        <FILE id="XJUjEU" name="Background.hxx" compile="0" resource="0" file="../3rdparty/tia/Background.hxx"/>
-        <FILE id="ZriwAs" name="Ball.cxx" compile="1" resource="0" file="../3rdparty/tia/Ball.cxx"/>
-        <FILE id="cRpmUb" name="Ball.hxx" compile="0" resource="0" file="../3rdparty/tia/Ball.hxx"/>
-        <FILE id="SHzHYg" name="DelayQueue.hxx" compile="0" resource="0" file="../3rdparty/tia/DelayQueue.hxx"/>
-        <FILE id="Gp4r3F" name="DelayQueueIterator.hxx" compile="0" resource="0"
-              file="../3rdparty/tia/DelayQueueIterator.hxx"/>
-        <FILE id="r5wVpu" name="DelayQueueIteratorImpl.hxx" compile="0" resource="0"
-              file="../3rdparty/tia/DelayQueueIteratorImpl.hxx"/>
-        <FILE id="o0x8xM" name="DelayQueueMember.hxx" compile="0" resource="0"
-              file="../3rdparty/tia/DelayQueueMember.hxx"/>
-        <FILE id="HZnn28" name="DrawCounterDecodes.cxx" compile="1" resource="0"
-              file="../3rdparty/tia/DrawCounterDecodes.cxx"/>
-        <FILE id="fxx4lo" name="DrawCounterDecodes.hxx" compile="0" resource="0"
-              file="../3rdparty/tia/DrawCounterDecodes.hxx"/>
-        <FILE id="azYrNE" name="FrameLayout.hxx" compile="0" resource="0" file="../3rdparty/tia/FrameLayout.hxx"/>
-        <FILE id="JInZMb" name="LatchedInput.cxx" compile="1" resource="0"
-              file="../3rdparty/tia/LatchedInput.cxx"/>
-        <FILE id="kyf7K0" name="LatchedInput.hxx" compile="0" resource="0"
-              file="../3rdparty/tia/LatchedInput.hxx"/>
-        <FILE id="yu6VGf" name="Missile.cxx" compile="1" resource="0" file="../3rdparty/tia/Missile.cxx"/>
-        <FILE id="TrTx08" name="Missile.hxx" compile="0" resource="0" file="../3rdparty/tia/Missile.hxx"/>
+      <GROUP id="{3344A43A-B55B-7876-70B3-CCC17DA4B65B}" name="tiasound">
+        <FILE id="MPXuTN" name="TIASound.c" compile="1" resource="0" file="../3rdparty/TIASound.c"/>
+        <FILE id="xcibWu" name="TIASound.h" compile="0" resource="0" file="../3rdparty/TIASound.h"/>
       </GROUP>
       <GROUP id="{1152B116-4DDF-40B2-E59A-469FEBCF5C64}" name="Resources">
         <FILE id="oVLZdc" name="logo.png" compile="0" resource="1" file="Resources/logo.png"/>
       </GROUP>
       <GROUP id="{960C83BD-AB67-7827-EDF2-14718DC9DA48}" name="Common">
+        <FILE id="KuKENT" name="SingleLineTextEditor.cpp" compile="1" resource="0"
+              file="../modules/slCommon/SingleLineTextEditor.cpp"/>
+        <FILE id="EAT7hb" name="SingleLineTextEditor.h" compile="0" resource="0"
+              file="../modules/slCommon/SingleLineTextEditor.h"/>
         <FILE id="yH291b" name="slCommon.h" compile="0" resource="0" file="../modules/slCommon/slCommon.h"/>
         <FILE id="lOncym" name="slComponents.cpp" compile="1" resource="0"
               file="../modules/slCommon/slComponents.cpp"/>

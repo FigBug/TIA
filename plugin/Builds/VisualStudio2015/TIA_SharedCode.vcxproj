@@ -283,16 +283,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\3rdparty\tia\frame-manager\AbstractFrameManager.cxx"/>
-    <ClCompile Include="..\..\..\3rdparty\tia\frame-manager\FrameLayoutDetector.cxx"/>
-    <ClCompile Include="..\..\..\3rdparty\tia\frame-manager\FrameManager.cxx"/>
-    <ClCompile Include="..\..\..\3rdparty\tia\frame-manager\JitterEmulation.cxx"/>
-    <ClCompile Include="..\..\..\3rdparty\tia\frame-manager\YStartDetector.cxx"/>
-    <ClCompile Include="..\..\..\3rdparty\tia\Background.cxx"/>
-    <ClCompile Include="..\..\..\3rdparty\tia\Ball.cxx"/>
-    <ClCompile Include="..\..\..\3rdparty\tia\DrawCounterDecodes.cxx"/>
-    <ClCompile Include="..\..\..\3rdparty\tia\LatchedInput.cxx"/>
-    <ClCompile Include="..\..\..\3rdparty\tia\Missile.cxx"/>
+    <ClCompile Include="..\..\..\3rdparty\TIASound.c"/>
+    <ClCompile Include="..\..\..\modules\slCommon\SingleLineTextEditor.cpp"/>
     <ClCompile Include="..\..\..\modules\slCommon\slComponents.cpp"/>
     <ClCompile Include="..\..\..\modules\slCommon\slDsp.cpp"/>
     <ClCompile Include="..\..\..\modules\slCommon\slLookAndFeel.cpp"/>
@@ -2212,21 +2204,8 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_video.cpp"/>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\3rdparty\tia\frame-manager\AbstractFrameManager.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\frame-manager\FrameLayoutDetector.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\frame-manager\FrameManager.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\frame-manager\JitterEmulation.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\frame-manager\YStartDetector.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\Background.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\Ball.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\DelayQueue.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\DelayQueueIterator.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\DelayQueueIteratorImpl.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\DelayQueueMember.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\DrawCounterDecodes.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\FrameLayout.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\LatchedInput.hxx"/>
-    <ClInclude Include="..\..\..\3rdparty\tia\Missile.hxx"/>
+    <ClInclude Include="..\..\..\3rdparty\TIASound.h"/>
+    <ClInclude Include="..\..\..\modules\slCommon\SingleLineTextEditor.h"/>
     <ClInclude Include="..\..\..\modules\slCommon\slCommon.h"/>
     <ClInclude Include="..\..\..\modules\slCommon\slComponents.h"/>
     <ClInclude Include="..\..\..\modules\slCommon\slDsp.h"/>
@@ -2730,6 +2709,7 @@
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_data_structures\values\juce_Value.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_data_structures\values\juce_ValueTree.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_data_structures\values\juce_ValueTreeSynchroniser.h"/>
+    <ClInclude Include="..\..\..\..\JUCE\modules\juce_data_structures\values\juce_ValueWithDefault.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_data_structures\juce_data_structures.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_events\broadcasters\juce_ActionBroadcaster.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_events\broadcasters\juce_ActionListener.h"/>
@@ -2777,6 +2757,7 @@
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_graphics\geometry\juce_BorderSize.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_graphics\geometry\juce_EdgeTable.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_graphics\geometry\juce_Line.h"/>
+    <ClInclude Include="..\..\..\..\JUCE\modules\juce_graphics\geometry\juce_Parallelogram.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_graphics\geometry\juce_Path.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_graphics\geometry\juce_PathIterator.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_graphics\geometry\juce_PathStrokeType.h"/>
@@ -3012,7 +2993,6 @@
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h"/>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\3rdparty\tia\frame-manager\module.mk"/>
     <None Include="..\..\Resources\logo.png"/>
     <None Include="..\..\..\..\JUCE\modules\juce_audio_formats\codecs\flac\Flac Licence.txt"/>
     <None Include="..\..\..\..\JUCE\modules\juce_audio_formats\codecs\oggvorbis\Ogg Vorbis Licence.txt"/>

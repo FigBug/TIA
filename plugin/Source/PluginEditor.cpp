@@ -13,10 +13,10 @@
 #include "BinaryData.h"
 
 //==============================================================================
-PAPUAudioProcessorEditor::PAPUAudioProcessorEditor (PAPUAudioProcessor& p)
+TIAAudioProcessorEditor::TIAAudioProcessorEditor (TIAAudioProcessor& p)
     : slAudioProcessorEditor (p, 60, 100), processor (p)
 {
-    additionalProgramming = "Shay Green";
+    additionalProgramming = "Ron Fries";
     
     logo = ImageFileFormat::loadFrom (BinaryData::logo_png, BinaryData::logo_pngSize);
     
@@ -40,21 +40,21 @@ PAPUAudioProcessorEditor::PAPUAudioProcessorEditor (PAPUAudioProcessor& p)
     scope.setVerticalZoomFactor (3.0f);
 }
 
-PAPUAudioProcessorEditor::~PAPUAudioProcessorEditor()
+TIAAudioProcessorEditor::~TIAAudioProcessorEditor()
 {
 }
 
 //==============================================================================
-void PAPUAudioProcessorEditor::paint (Graphics& g)
+void TIAAudioProcessorEditor::paint (Graphics& g)
 {
     slAudioProcessorEditor::paint (g);
         
     g.drawImageAt (logo, getWidth() / 2 - logo.getWidth() / 2, 0);
 }
 
-void PAPUAudioProcessorEditor::resized()
+void TIAAudioProcessorEditor::resized()
 {
-    using AP = PAPUAudioProcessor;
+    using AP = TIAAudioProcessor;
     
     slAudioProcessorEditor::resized();
     
