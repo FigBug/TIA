@@ -1,0 +1,3 @@
+[submodule "modules/dRowAudio"]
+	path = modules/dRowAudio
+	url = git@github.com:FigBug/drowaudio.git

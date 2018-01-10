@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="JPnRUR" name="TIA" projectType="audioplug" version="1.0.0"
+              bundleIdentifier="com.socalabs.TIA" includeBinaryInAppConfig="1"
+              buildVST="1" buildVST3="0" buildAU="1" buildAUv3="0" buildRTAS="0"
+              buildAAX="0" pluginName="TIA" pluginDesc="TIA" pluginManufacturer="SocaLabs"
+              pluginManufacturerCode="Soca" pluginCode="TIAa" pluginChannelConfigs="{0,2}"
+              pluginIsSynth="1" pluginWantsMidiIn="1" pluginProducesMidiOut="0"
+              pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0" pluginAUExportPrefix="TIAAU"
+              pluginRTASCategory="" aaxIdentifier="com.socalabs.TIA" pluginAAXCategory="AAX_ePlugInCategory_Dynamics"
+              jucerVersion="5.2.0" companyName="SocaLabs" companyWebsite="www.socalabs.com"
+              companyEmail="info@socalabs.com" displaySplashScreen="0" reportAppUsage="0"
+              splashScreenColour="Dark" buildStandalone="0" enableIAA="0" cppLanguageStandard="14"
+              companyCopyright="SocaLabs">
+  <MAINGROUP id="dPRjsF" name="TIA">
+    <GROUP id="{EE796482-0D02-0052-80F4-B1FE6CE0D41A}" name="Source">
+      <GROUP id="{3344A43A-B55B-7876-70B3-CCC17DA4B65B}" name="TIA">
+        <GROUP id="{F5534634-15A8-4BC6-D31A-0C7BF13AB732}" name="frame-manager">
+          <FILE id="UPvTnP" name="AbstractFrameManager.cxx" compile="1" resource="0"
+                file="../3rdparty/tia/frame-manager/AbstractFrameManager.cxx"/>
+          <FILE id="ah7cox" name="AbstractFrameManager.hxx" compile="0" resource="0"
+                file="../3rdparty/tia/frame-manager/AbstractFrameManager.hxx"/>
+          <FILE id="YZGV8D" name="FrameLayoutDetector.cxx" compile="1" resource="0"
+                file="../3rdparty/tia/frame-manager/FrameLayoutDetector.cxx"/>
+          <FILE id="IaEyXa" name="FrameLayoutDetector.hxx" compile="0" resource="0"
+                file="../3rdparty/tia/frame-manager/FrameLayoutDetector.hxx"/>
+          <FILE id="zgDKjg" name="FrameManager.cxx" compile="1" resource="0"
+                file="../3rdparty/tia/frame-manager/FrameManager.cxx"/>
+          <FILE id="Zrgk1b" name="FrameManager.hxx" compile="0" resource="0"
+                file="../3rdparty/tia/frame-manager/FrameManager.hxx"/>
+          <FILE id="FARQN9" name="JitterEmulation.cxx" compile="1" resource="0"
+                file="../3rdparty/tia/frame-manager/JitterEmulation.cxx"/>
+          <FILE id="t54fPJ" name="JitterEmulation.hxx" compile="0" resource="0"
+                file="../3rdparty/tia/frame-manager/JitterEmulation.hxx"/>
+          <FILE id="FuLlQT" name="module.mk" compile="0" resource="1" file="../3rdparty/tia/frame-manager/module.mk"/>
+          <FILE id="cZCnJl" name="YStartDetector.cxx" compile="1" resource="0"
+                file="../3rdparty/tia/frame-manager/YStartDetector.cxx"/>
+          <FILE id="uVbzzC" name="YStartDetector.hxx" compile="0" resource="0"
+                file="../3rdparty/tia/frame-manager/YStartDetector.hxx"/>
+        </GROUP>
+        <FILE id="m01VzP" name="Background.cxx" compile="1" resource="0" file="../3rdparty/tia/Background.cxx"/>
+        <FILE id="XJUjEU" name="Background.hxx" compile="0" resource="0" file="../3rdparty/tia/Background.hxx"/>
+        <FILE id="ZriwAs" name="Ball.cxx" compile="1" resource="0" file="../3rdparty/tia/Ball.cxx"/>
+        <FILE id="cRpmUb" name="Ball.hxx" compile="0" resource="0" file="../3rdparty/tia/Ball.hxx"/>
+        <FILE id="SHzHYg" name="DelayQueue.hxx" compile="0" resource="0" file="../3rdparty/tia/DelayQueue.hxx"/>
+        <FILE id="Gp4r3F" name="DelayQueueIterator.hxx" compile="0" resource="0"
+              file="../3rdparty/tia/DelayQueueIterator.hxx"/>
+        <FILE id="r5wVpu" name="DelayQueueIteratorImpl.hxx" compile="0" resource="0"
+              file="../3rdparty/tia/DelayQueueIteratorImpl.hxx"/>
+        <FILE id="o0x8xM" name="DelayQueueMember.hxx" compile="0" resource="0"
+              file="../3rdparty/tia/DelayQueueMember.hxx"/>
+        <FILE id="HZnn28" name="DrawCounterDecodes.cxx" compile="1" resource="0"
+              file="../3rdparty/tia/DrawCounterDecodes.cxx"/>
+        <FILE id="fxx4lo" name="DrawCounterDecodes.hxx" compile="0" resource="0"
+              file="../3rdparty/tia/DrawCounterDecodes.hxx"/>
+        <FILE id="azYrNE" name="FrameLayout.hxx" compile="0" resource="0" file="../3rdparty/tia/FrameLayout.hxx"/>
+        <FILE id="JInZMb" name="LatchedInput.cxx" compile="1" resource="0"
+              file="../3rdparty/tia/LatchedInput.cxx"/>
+        <FILE id="kyf7K0" name="LatchedInput.hxx" compile="0" resource="0"
+              file="../3rdparty/tia/LatchedInput.hxx"/>
+        <FILE id="yu6VGf" name="Missile.cxx" compile="1" resource="0" file="../3rdparty/tia/Missile.cxx"/>
+        <FILE id="TrTx08" name="Missile.hxx" compile="0" resource="0" file="../3rdparty/tia/Missile.hxx"/>
+      </GROUP>
+      <GROUP id="{1152B116-4DDF-40B2-E59A-469FEBCF5C64}" name="Resources">
+        <FILE id="oVLZdc" name="logo.png" compile="0" resource="1" file="Resources/logo.png"/>
+      </GROUP>
+      <GROUP id="{960C83BD-AB67-7827-EDF2-14718DC9DA48}" name="Common">
+        <FILE id="yH291b" name="slCommon.h" compile="0" resource="0" file="../modules/slCommon/slCommon.h"/>
+        <FILE id="lOncym" name="slComponents.cpp" compile="1" resource="0"
+              file="../modules/slCommon/slComponents.cpp"/>
+        <FILE id="KzQ8Iz" name="slComponents.h" compile="0" resource="0" file="../modules/slCommon/slComponents.h"/>
+        <FILE id="n1vFYA" name="slDsp.cpp" compile="1" resource="0" file="../modules/slCommon/slDsp.cpp"/>
+        <FILE id="Pfu9dt" name="slDsp.h" compile="0" resource="0" file="../modules/slCommon/slDsp.h"/>
+        <FILE id="vsQult" name="slLookAndFeel.cpp" compile="1" resource="0"
+              file="../modules/slCommon/slLookAndFeel.cpp"/>
+        <FILE id="APFaEs" name="slLookAndFeel.h" compile="0" resource="0" file="../modules/slCommon/slLookAndFeel.h"/>
+        <FILE id="Gp8CSi" name="slParameter.cpp" compile="1" resource="0" file="../modules/slCommon/slParameter.cpp"/>
+        <FILE id="qUAqy4" name="slParameter.h" compile="0" resource="0" file="../modules/slCommon/slParameter.h"/>
+        <FILE id="db2amy" name="slPluginEditor.cpp" compile="1" resource="0"
+              file="../modules/slCommon/slPluginEditor.cpp"/>
+        <FILE id="RCJmPi" name="slPluginEditor.h" compile="0" resource="0"
+              file="../modules/slCommon/slPluginEditor.h"/>
+        <FILE id="Tf30wW" name="slProcessor.cpp" compile="1" resource="0" file="../modules/slCommon/slProcessor.cpp"/>
+        <FILE id="dkx4qs" name="slProcessor.h" compile="0" resource="0" file="../modules/slCommon/slProcessor.h"/>
+        <FILE id="UNYR6r" name="slProgram.cpp" compile="1" resource="0" file="../modules/slCommon/slProgram.cpp"/>
+        <FILE id="qx7GTy" name="slProgram.h" compile="0" resource="0" file="../modules/slCommon/slProgram.h"/>
+        <FILE id="OwCrZP" name="slUtil.cpp" compile="1" resource="0" file="../modules/slCommon/slUtil.cpp"/>
+        <FILE id="dnjll9" name="slUtil.h" compile="0" resource="0" file="../modules/slCommon/slUtil.h"/>
+      </GROUP>
+      <FILE id="iEbZ9q" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="XzLyGB" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="sm654A" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="xX3taW" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX" extraCompilerFlags="-Wunused-value"
+               extraDefs="BSPF_MAC_OSX=1">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="TIA" headerPath="../../../3rdparty/Gb_Snd_Emu-0.1.4&#10;../../../modules/slCommon"
+                       osxCompatibility="10.9 SDK" enablePluginBinaryCopyStep="1"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="TIA"
+                       headerPath="../../../3rdparty/Gb_Snd_Emu-0.1.4&#10;../../../modules/slCommon"
+                       osxArchitecture="64BitUniversal" osxCompatibility="10.9 SDK"
+                       enablePluginBinaryCopyStep="1"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE/modules"/>
+        <MODULEPATH id="dRowAudio" path="../modules/drowaudio/module"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2015 targetFolder="Builds/VisualStudio2015" extraDefs="BSPF_WINDOWS=1">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="1" optimisation="1" targetName="TIA_32b" headerPath="../../../3rdparty/Gb_Snd_Emu-0.1.4&#10;../../../modules/slCommon"
+                       postbuildCommand="copy /Y &quot;$(OutDir)\$(TargetFileName)&quot; &quot;C:\Program Files (x86)\VSTPlugins&quot;"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="0" optimisation="3" targetName="TIA_32b" headerPath="../../../3rdparty/Gb_Snd_Emu-0.1.4&#10;../../../modules/slCommon"
+                       postbuildCommand="copy /Y &quot;$(OutDir)\$(TargetFileName)&quot; &quot;C:\Program Files (x86)\VSTPlugins&quot;"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
+                       linkTimeOptimisation="1"/>
+        <CONFIGURATION name="Debug64" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       isDebug="1" optimisation="1" targetName="TIA_64b" headerPath="../../../3rdparty/Gb_Snd_Emu-0.1.4&#10;../../../modules/slCommon"
+                       postbuildCommand="copy /Y &quot;$(OutDir)\$(TargetFileName)&quot; &quot;C:\Program Files\VSTPlugins&quot;"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"/>
+        <CONFIGURATION name="Release64" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       isDebug="0" optimisation="3" targetName="TIA_64b" headerPath="../../../3rdparty/Gb_Snd_Emu-0.1.4&#10;../../../modules/slCommon"
+                       postbuildCommand="copy /Y &quot;$(OutDir)\$(TargetFileName)&quot; &quot;C:\Program Files\VSTPlugins&quot;"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
+                       linkTimeOptimisation="1"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE/modules"/>
+        <MODULEPATH id="dRowAudio" path="../modules/drowaudio/module"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2015>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="dRowAudio" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+</JUCERPROJECT>
